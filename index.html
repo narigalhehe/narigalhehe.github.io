@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Identifikasi Flora &amp; Fauna Asli Indonesia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Identifikasi Flora &amp; Fauna Nusantara</h1>
+      <p class="subjudul">
+        Kenali hewan dan tumbuhan asli Indonesia — cari nama, atau telusuri satu
+        per satu.
+      </p>
+
+      <div class="kotak-cari">
+        <span>🔎</span>
+        <input
+          type="text"
+          id="input-cari"
+          placeholder="Cari nama hewan atau tumbuhan..."
+        />
+      </div>
+    </header>
+
+    <div class="filter-wrap">
+      <button class="tombol-filter aktif" data-kategori="semua">Semua</button>
+      <button class="tombol-filter" data-kategori="hewan">Hewan</button>
+      <button class="tombol-filter" data-kategori="tumbuhan">Tumbuhan</button>
+    </div>
+
+    <main>
+      <p id="jumlah-hasil"></p>
+      <div class="grid-kartu" id="grid-kartu"></div>
+    </main>
+
+    <footer>
+      <footer>© 2026 Magalis · Semua hak dilindungi</footer>
+    </footer>
+
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <button class="tombol-tutup" id="tombol-tutup">✕</button>
+        <img class="foto-besar" id="modal-ikon" src="" alt="">
+        <h2 id="modal-nama"></h2>
+        <p class="nama-latin" id="modal-latin"></p>
+
+        <div class="baris-info">
+          <b>Kategori</b><span id="modal-kategori"></span>
+        </div>
+        <div class="baris-info">
+          <b>Habitat</b><span id="modal-habitat"></span>
+        </div>
+        <div class="baris-info">
+          <b>Status</b><span class="status-pill" id="modal-status"></span>
+        </div>
+
+        <p class="deskripsi" id="modal-deskripsi"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
